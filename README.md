@@ -1,2 +1,7 @@
 # mithril-lazy-img
-img component for mithril w lazy loading
+quick img component for mithril that uses IntersectionObserver to load images only when needed
+
+
+## todo
+* support animation between LQ img and main img
+* support intersectionobserver and module polyfill

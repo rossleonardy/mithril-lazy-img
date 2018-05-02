@@ -1,0 +1,22 @@
+<html>
+<head>
+<script src="https://unpkg.com/mithril"></script>
+<style>
+img {display:block; min-height: 100px; opacity:0; transition: 0.2s ease-in opacity;}
+.img-loaded {opacity:1.0;}
+</style>
+</head>
+<body>
+<script type="module" src="./index.js"></script>
+<script type="module">
+'use strict';
+import LazyImg from './index.js';
+
+m.mount(document.body, {view: function() {
+	return Array.from(Array(10), 
+		x => {return m(LazyImg, {dataSrc: 'http://via.placeholder.com/1000x150', dataLQSrc: 'http://via.placeholder.com/500x150'})});
+}});
+
+</script>
+</body>
+</html>
